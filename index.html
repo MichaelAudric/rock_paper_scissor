@@ -29,6 +29,16 @@
                 return "You lose! "+numToRPS(computerSelection)+" beats "+numToRPS(playerSelection)+"."
             }
         }
+        function rpsToNum(rps){
+            rps = rps.toUpperCase();
+            if(rps=="ROCK"){
+                return 0;
+            }
+            else if(rps=="PAPER"){
+                return 1;
+            }
+            return 2;
+        }
 
     </script>
 </body>
