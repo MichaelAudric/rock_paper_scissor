@@ -9,7 +9,27 @@
         function getComputerChoice(){
             return Math.floor(Math.random()*10)%3;
         }
-        
+        function numToRPS(num){
+            if(num==0){
+                return "Rock";
+            }
+            else if(num==1){
+                return "Paper";
+            }
+            return "Scissor";
+        }
+        function play(playerSelection, computerSelection){
+            if(playerSelection==computerSelection){
+                return "It\'s a draw!";
+            }
+            else if(computerSelection+1==playerSelection || (computerSelection==2 && playerSelection==0)){
+                return "You win!";
+            }
+            else {
+                return "You lose! "+numToRPS(computerSelection)+" beats "+numToRPS(playerSelection)+"."
+            }
+        }
+
     </script>
 </body>
 </html>
