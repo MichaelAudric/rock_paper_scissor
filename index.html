@@ -39,6 +39,16 @@
             }
             return 2;
         }
+        function game(){
+            for(let i = 0; i < 5; i++){
+                playerSelection = rpsToNum(prompt("rock, paper or scissor?"));
+                computerSelection = getComputerChoice();
+                console.log("You selected "+numToRPS(playerSelection));
+                console.log("Computer's selected "+numToRPS(computerSelection));
+                console.log(play(playerSelection,computerSelection));
+            }
+        }
+        game();
 
     </script>
 </body>
